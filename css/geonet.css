@@ -1,0 +1,272 @@
+	body, html {
+	  height: 100%;
+	  width: 100%;
+	}
+
+	div#map {
+	  width: 100%; height: 100%;
+	}
+	
+	h1#geonetheader {
+		background-color: darkblue;
+		color: white;
+		text-align: center;
+		width: 80%
+	}
+	
+	/* ################################ */
+	<!-- popup -->
+	/* #popup { */
+		/* position: absolute; */
+		/* background-color: white; */
+		/* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); */
+		/* padding: 15px; */
+		/* border-radius: 10px; */
+		/* border: 1px solid #cccccc; */
+		/* bottom: 12px; */
+		/* left: -50px; */
+		/* min-width: 40vw; */
+		/* max-width: 60vw; */
+		/* padding-top: 20px; */
+	/* } */
+
+	/* #popup:after, #popup:before { */
+		/* top: 100%; */
+		/* border: solid transparent; */
+		/* content: " "; */
+		/* height: 0; */
+		/* width: 0; */
+		/* position: absolute; */
+		/* pointer-events: none; */
+	/* } */
+
+	/* #popup:after { */
+		/* border-top-color: white; */
+		/* border-width: 10px; */
+		/* left: 48px; */
+		/* margin-left: -10px; */
+	/* } */
+
+	/* #popup:before { */
+		/* border-top-color: #cccccc; */
+		/* border-width: 11px; */
+		/* left: 48px; */
+		/* margin-left: -11px; */
+	/* } */
+
+	#popup-closer {
+		text-decoration: none;
+		display: none;
+		position: absolute;
+		top: 10px;
+		right: 8px;
+	}
+
+	#popup-closer:visited {
+		text-decoration: inherit;
+		color: inherit;
+		cursor: auto;
+	}
+
+	#popup-closer:after {
+		content: "✖";
+	}
+
+
+	#popup-content {
+		overflow-x: scroll;
+	}
+
+	#error-closer {
+		text-decoration: none;
+		position: absolute;
+		top: 2px;
+		right: 8px;
+	}
+
+	#error-closer:visited {
+		text-decoration: inherit;
+		color: inherit;
+		cursor: auto;
+	}
+
+	#error-closer:after {
+		content: "✖";
+	}
+
+
+
+	/* Error popup */
+	#errorpopup {
+		display: none;
+		position: relative;
+		left: 0;
+		top: 0;
+		width: 40%;
+		/* height: 10%; */
+		background-color: white;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+		padding: 15px;
+		border-radius: 10px;
+		border: 1px solid #cccccc;
+		/* overflow: auto; */
+		font-size: 0.7em;
+		font-family: sans-serif;
+		z-index: 2000;
+	}
+
+	/* layerhover Content/Box */
+	#errorpopup-content {
+		background-color: #fefefe;
+		margin: auto;
+		padding: 5px;
+		/* border: 1px solid #888; */
+		width: 100%;
+		z-index: 2001;
+	}
+
+    /* ##################################### */
+	table {
+		border: none;
+		border-collapse: collapse;
+		font-family: sans-serif;
+	}
+
+	table td {
+		border-left: 1px solid #ddd;
+		border-right: 1px solid #ddd;
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+	}
+
+	thead>tr>td {
+		border-bottom: 1px solid #ddd;
+		font-weight: 600;
+	}
+
+	table td:first-child {
+		border-left: none;
+	}
+
+	table td:last-child {
+		border-right: none;
+	}
+
+	tbody td:nth-of-type(odd), thead td:nth-of-type(odd) {
+		background: #E6E6E6;
+	}
+	
+	/* ######################################## */
+	<!-- Legend control -->
+	.legend-control {
+		z-index: 1000;
+	    position: absolute;
+        top: 65px;
+		right: .5em;
+    }
+
+	.container {
+	  display: flex; 
+	  gap: 5px 5px;
+	  height: calc(100% - 72px);
+	  /* width: 1200px; */
+	  /* position: absolute; */
+	}
+	
+	.gridmap {
+	  flex-grow: 1;
+	  margin-top: 2px;
+	  margin-right: 0px;
+	  padding: 0px;
+	}
+	
+	.gridlegend {
+	  /* height: calc(100% - 72px); */
+	  height: 100%;
+	  width: 0px;
+	  flex-grow: 1;
+	  margin-top: 2px;
+	  margin-left: 2px;
+	  padding: 0px;	
+	}  
+
+    /* #####################################
+	   The Modal (background) */
+    /* .modal { */
+      /* display: none; */
+      /* position: fixed; */
+      /* z-index: 1; */
+      /* left: 0; */
+      /* top: 0; */
+      /* width: 100%; */
+      /* height: 100%; */
+      /* overflow: auto; */
+      /* background-color: rgb(0, 0, 0); */
+      /* background-color: rgba(0, 0, 0, 0.4); */
+    /* } */
+    
+	.layerhover {
+		display: none;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 20%;
+		/* height: 10%; */
+		background-color: white;
+		box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+		padding: 15px;
+		border-radius: 10px;
+		border: 1px solid #cccccc;
+		overflow: auto;
+
+		/* min-width: 40vw; */
+		/* max-width: 60vw; */
+		/* padding-top: 20px; */
+	}
+	
+	/* layerhover Content/Box */
+    .layerhover-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 5px;
+      border: 1px solid #888;
+      width: 100%;
+	  font-size: 'x-small';
+	  font-family: sans-serif
+    }
+    
+@media screen and (max-width: 650px) {
+  #geogem-icon {
+	height: 32px;
+  }
+  
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* icon to spin until layer is loaded */
+.spinner:after {
+	content: "";
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	margin-left: -20px;
+	border-radius: 50%;
+	border: 5px solid rgba(180, 180, 180, 0.6);
+	border-top-color: rgba(0, 0, 0, 0.6);
+	animation: spinner 0.6s linear infinite;
+}
+
+.legend_tabelrow { 
+  border: solid;
+  border-color: lightgrey;
+  border-width: thin 0;
+}

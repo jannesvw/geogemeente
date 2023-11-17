@@ -1,0 +1,9 @@
+site_name: PHG 1995
+nav:
+    - Geologie: 0_Geologie.md
+    - Geomorfologie en bodem: 1_Geomorfologie en bodem.md
+    - De bodem: 2_De bodem.md
+    - Hydrologie: 3_Hydrologie.md
+    - Dijkverplaatsingen: 4_Dijkverplaatsingen.md
+    - Referenties: 5_Referenties.md
+theme: readthedocs

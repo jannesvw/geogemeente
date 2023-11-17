@@ -1,0 +1,416 @@
+ <head>
+        <link href="../css/geogemeente.css" type="text/css" rel="stylesheet">
+		<link rel="icon" href="favicon.ico">
+		<meta charset="utf-8">
+		<style>
+			[tip] .tooltip {
+			  position: fixed;
+			  font-size: 16px;
+			  line-height: 20px;
+			  padding: 5px;
+			  background: white;
+			  border: 1px solid #ccc;
+			  visibility: hidden;
+			  opacity: 0;
+			  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+			  transition: opacity 0.3s, visibility 0s;
+			}
+
+			[tip]:hover .tooltip {
+			  visibility: visible;
+			  opacity: 1;
+			}
+
+			button {
+			  display: block;
+			  cursor: pointer;
+			  padding: 8px 15px;
+			  border: 1px solid gray;
+			  border-radius: 4px;
+			  margin: 50px;
+			  font-size: 18px;
+			  background: white;
+			}
+		</style>
+</head>
+<body onload="tips()">
+	<div class="navigation-bar" id="myTopnav">
+		<div id="navigation-container">
+		  <div id="div-icon">
+			<img src="./images/geogemeente2.gif" class="geogemeente-icon">
+		  </div>
+		  <div id="div-totalmenu">
+			<div id="div-menu">
+				<a href="../index.html">Home</a>
+				<!-- https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+				<a class="active" href="#">Putten</a>
+				<div class="dropdown-achtergrondinfo">
+					<a class="dropbtn_a">Achtergrond info</a>
+					<div class="dropdown-content-achtergrondinfo1">
+						<a href="./putteninformatie/straatnamen/site/002_ABDINCKHOFSTRAAT/" target="_blank">Straatnamen</a>
+						<a href="./putteninformatie/arkemheen/site/001_Geologie/" target="_blank">Arkemheen</a>
+						<a href="./putteninformatie/monumenten/site/034_Bijstein/index.html" target="_blank">Monumenten</a>
+						<a href="./putteninformatie/bodem/site/008_zWz%20-%20Broekeerdgronden%20met%20een%20zanddek%20en%20een%20zandondergrond%20zonder%20duidelijke%20podzol-B" target="_blank"/>Bodem</a>
+						<a href="./putteninformatie/grootgrondbezitters/site/000_Inleiding/index.html" target="_blank"/>Grondbezit</a>
+						<a href="./putteninformatie/zuiderzeestraatweg1830/index.html" target="_blank"/>Zuiderzeestraatweg 1830</a>
+					</div>
+				</div>
+				<a href="./kaart.html?lg=Putten" target="_blank">Kaart</a>
+			    <a href='mailto:geogemeente@gmail.com'>Contact</a>
+			</div>
+		    <div class="dropdown">
+			  <a href="javascript:void(0);" class="dropbtn" onclick="myFunction()"><img class="iconmenu" alt="Qries" src="./images/menu.png"></a>
+			  <div class="dropdown-content">
+				<a href="../index.html">Home</a>
+				<a href="#">Putten</a>
+				<div class="dropdown-achtergrondinfo">
+					<a class="dropbtn_a">Achtergrond info</a>
+					<div class="dropdown-content-achtergrondinfo2">
+						<a href="./putteninformatie/straatnamen/site/002_ABDINCKHOFSTRAAT/" target="_blank">Straatnamen</a>
+						<a href="./putteninformatie/arkemheen/site/001_Geologie/" target="_blank">Arkemheen</a>
+						<a href="./putteninformatie/monumenten/site/021_Hoeve%20Oud%20Rookhuizen/index.html" target="_blank">Monumenten</a>
+						<a href="./putteninformatie/bodem/site/008_zWz%20-%20Broekeerdgronden%20met%20een%20zanddek%20en%20een%20zandondergrond%20zonder%20duidelijke%20podzol-B" target="_blank"/>Bodem</a>
+						<a href="./putteninformatie/grootgrondbezitters/site/000_Inleiding/index.html" target="_blank"/>Grondbezit</a>
+						<a href="./putteninformatie/zuiderzeestraatweg1830/index.html" target="_blank"/>Zuiderzeestraatweg 1830</a>
+					</div>
+				</div>
+				<a href="./kaart.html?lg=Putten" target="_blank">'>Kaart</a>
+				<a href='mailto:geogemeente@gmail.com'>Contract</a>
+			  </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+	<!-- <div class="contentrow" onclick="window.open('./kaart.html?lg=Putten','mywindow');" style="cursor: pointer;"> -->
+	<div class="contentrow");" style="cursor: pointer;">
+		<div id='gemeentenaam'>
+				<a href="./kaart.html?lg=Putten" target="_blank" id='geogemeentelink' tip="Open kaart Putten">GeoGemeente Putten op de kaart</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="./kaart.html?lg=Putten" target="_blank" id='geogemeentepointer'>
+					<img src="./images/geogemeentepointer.png" width='40px'>
+					<img src="./images/geogemeentepointer_hover.png" width='40px'>
+				</a>
+			<!-- <div id='widthheight' style='font-size: 12px;"> -->
+			<!-- <div id='widthheight'> -->
+			<!-- </div> -->
+		</div>
+		<div class="gridverticalcenter">
+			<div class='gridcontainer'>
+				<div class="griditem" onclick="openTab('putten');">
+					<img src="./images/putten1.png" class="menu_icon">
+					<span class="menu_text">Putten</span>
+				</div>
+				<div class="griditem" onclick="openTab('basisregistratie');" tip="Info over laag groep Basisregistraties">
+					<img src="./images/basisregistratie.png" class="menu_icon">
+					<span class="menu_text">Basisregistraties</span>
+				</div>
+				<div class="griditem" onclick="openTab('bodem');"" tip="Info over laag groep Bodem">
+					<img src="./images/bodem.png" class="menu_icon">
+					<span class="menu_text">Bodem</span>
+				</div>
+				<div class="griditem" onclick="openTab('historie');"" tip="Info over laag groep Historie">
+					<img src="./images/historie.png" class="menu_icon">
+					<span class="menu_text">Historie</span>
+				</div>
+				<div class="griditem" onclick="openTab('infra en verkeer');"" tip="Info over laag groep Infra en verkeer">
+					<img src="./images/verkeer.png" class="menu_icon">
+					<span class="menu_text">Infra en verkeer</span>
+				</div>
+				<div class="griditem" onclick="openTab('landbouw');"" tip="Info over laag groep Landbouw">
+					<img src="./images/landbouw.png" class="menu_icon">
+					<span class="menu_text">Landbouw</span>
+				</div>
+				<div class="griditem" onclick="openTab('milieu');"" tip="Info over laag groep Milieu">
+					<img src="./images/milieu.png" class="menu_icon">
+					<span class="menu_text">Milieu</span>
+				</div>
+				<div class="griditem" onclick="openTab('natuur');"" tip="Info over laag groep Natuur">
+					<img src="./images/natuur.png" class="menu_icon">
+					<span class="menu_text">Natuur</span>
+				</div>
+				<div class="griditem" onclick="openTab('recreatie');" tip="Info over laag groep Recreatie">
+					<img src="./images/recreatie.png" class="menu_icon">
+					<span class="menu_text">Recreatie</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="detailcontainer">
+		<div class="detailinnercontainer">
+			<!-- The expanding grid (hidden by default) -->
+			<div id="putten" class="detailinfo" style="display:block">
+				<h1><a href="./kaart.html?lg=Putten" target="_blank" tip="Open kaart Putten">Putten op de kaart</a></h1>
+
+				<span style='font-size:1.7rem;line-height:160%;font-family:"Arial","sans-serif";color:black'>
+				De kaarten in deze groep zijn specifiek samengesteld ten
+				behoeve van geogemeente, en zijn vooral gebaseerd op lokaal interessante
+				informatie. De kaarten in de groep Putten zijn opgedeeld in een aantal
+				onderdelen:
+					<ul>
+						<li><b>Putten Algemeen.</b> Geeft een kaart met een
+						overzicht van de straatnamen van Putten en de achtergrondinformatie van elke
+						straatnaam, een kaart met een aantal historische foto's van Putten en een kaart
+						met een aantal gebouwnamen op basis van de kadastrale kaart van Putten van
+						1852.</li>
+
+						<li><b>Kloostergoed ed.</b> Geeft kaarten van historische
+						boerderijnamen weer per eigenaar: Wildforstergoed, Werden, St Marie,
+						Jufferenstift Elten, Herengoederen en Abdinckhof.</li>
+
+						<li><b>Arkemheen.</b> Kaarten van de polder Arkemheen,
+						gebaseerd op het boek Arkemheen te velde. Geeft onder andere een overzicht van de
+						bodemsamenstelling, hydrologie en dijkverplaatsing, achtergrond informatie
+						hierover.</li>
+
+						<li><b>Putten Monumenten.</b> Een kaart met daarop de 98
+						rijksmonumenten van Putten met achtergrondinformatie van elke monument.</li>
+
+						<li><b>Kadaster 1832.</b> In 1832 werd de eerste
+						complete kadastrale kaart van Nederland gepubliceerd. Op basis van de situatie
+						van 1832 zijn een aantal kaarten gemaakt die specifiek inzicht geven in de
+						situatie van toen: de kavels, de wegen in 1832, verdeling van het gebruik van
+						de kavels, de maalschappen, classificering van vruchtbaarheid, grootbezitters
+						in het dorp, bezittingen van de adel, perceelwijzigingen tussen 1827 en 1832,
+						bebouwing en de route Putten-Nijkerk voor de aanleg van de Nijkerkerstraat.</li>
+					</ul>
+					<p>Voor de kaart zie <a href="./kaart.html?lg=Putten" target="_blank" tip="Open kaart Putten">Putten</a>
+				</span>
+			</div>
+			
+			<div id="basisregistratie" class="detailinfo" style="display:none;">
+			  <h1><a href="./kaart.html?lg=Basisregistraties" target="_blank" tip="Open kaart Putten">Basisregistraties op de kaart</a></h1>
+				<span style='font-size:1.7rem;line-height:160%;font-family:"Arial","sans-serif";color:black'>
+					In deze groep vind je de luchtfoto's, de BAG adressen en gebouwen, en de luchtfoto's.
+					<p>Voor de kaart zie <a href="./kaart.html?lg=Basisregistraties" target="_blank" tip="Open kaart Putten">Basisregistraties</a>
+				</span>
+			</div>
+
+			<div id="bodem" class="detailinfo" style="display:none;">
+			  <h1><a href="./kaart.html?lg=Bodem" target="_blank" tip="Open kaart Putten">Bodem op de kaart</a></h1>
+				<span style='font-size:1.7rem;line-height:160%;font-family:"Arial","sans-serif";color:black'>
+					De bodem waarop we leven bestaat uit veel verschillende
+					samenstellingen, zoals bijv zand, klei en veen. Deze samenstelling was bepalend
+					voor het gebruik door de eeuwen. De samenstelling was echter geen constante:
+					door de eeuwen heen is door allerlei ontwikkelingen de samenstelling voor delen
+					aangepast. Naast de samenstelling van de bodem zijn ook de hoogte en de
+					waterstand belangrijke eigenschappen.
+					<ul>
+						<li><b>Bodem door de eeuwen.</b> Door
+						ontwikkelingen in het klimaat zijn is de samenstelling van de bodem voor grote
+						delen veranderd. Vanaf de periode rond 9000 voor Christus zijn kaarten
+						ontwikkeld die op belangrijke momenten in de geschiedenis aangeven hoe de
+						situatie er toen uitzag.</li>
+
+						<li><b>Putten Bodem.</b> De
+						samenstelling van de bodem is rond 1965 door grootschalig onderzoek bepaald.
+						Deze samenstelling is vastgelegd in kaarten. Voor de verschillende hoofdsoorten
+						bodems (zeeklei, podzol, kalkloze zandgronden, veengronden, dikke eerdgronden)
+						zijn separate kaarten samengesteld waarin op detailniveau kan worden ingezoomd,
+						en achtergrond informatie kan worden opgevraagd.</li>
+
+						<li><b>Bodem Overig.</b> Kaarten over
+						de ruilverkaveling in Putten, waar in Putten door vergraving de bodem sterk is
+						aangepast, hoe de bodem wordt gebruikt, waar de oudste grondsamenstelling kan
+						worden gevonden (pleistoceen) en de geomorfologische kaart.</li>
+
+						<li><b>Hoogte.</b> Kaarten van de actuele hoogte (AHN), hoogtepunt labels, hoogtelijnen en relieflijnen.</li>
+
+						<li><b>Water.</b> De hoogte van de
+						grondwaterspiegel, met kaarten voor de gemiddeld laagste stand, de gemiddeld
+						hoogste stand, de grondtrappen en de gemiddelde voorjaarsdiepte.</li>
+					</ul>
+					<p>Voor de kaart zie <a href="./kaart.html?lg=Bodem" target="_blank" tip="Open kaart Putten">Bodem</a>
+				</span>
+			</div>
+
+			<div id="historie" class="detailinfo" style="display:block">
+				<h1><a href="./kaart.html?lg=Historie" target="_blank" tip="Open kaart Putten">Historie op de kaart</a></h1>
+
+				<span style='font-size:1.7rem;line-height:160%;font-family:"Arial","sans-serif";color:black'>
+					De kaartlagen in de groep Historie geven informatie over:
+					<ul>
+						<li><b>Topotijdreis.</b> Deze website laat zien&nbsp;hoe een bepaald
+						stukje van Nederland er 50, 100 of 200 jaar geleden uitzag. Zo brengt
+						Topotijdreis vrij nauwkeurig&nbsp;in beeld hoe&nbsp;het landschap in 200 jaar
+						tijd is veranderd, hoe steden zijn gegroeid en nieuw land is gewonnen. In
+						topotijdreis zijn de kaarten per jaar te zien, maar de kaarten zijn vaak voor
+						langere periodes niet vernieuwd. Daarin is op GeoGemeente een selectie gemaakt
+						van de jaartallen waarin de kaart is aangepast, van 1815 tot 2012.</li>
+
+						<li>Andere historische lagen vind je bij Bodem &gt; Bodem door de eeuwen, in de groep Putten, 
+						en in de groep Infra en Verkeer &gt; Verkeer.</li>
+					</ul>
+					<p>Voor de kaart zie <a href="./kaart.html?lg=Historie" target="_blank" tip="Open kaart Putten">Historie</a>
+				</span>
+			</div>
+
+			<div id="infra en verkeer" class="detailinfo" style="display:block">
+				<h1><a href="./kaart.html?lg=Infra%20en%20verkeer" target="_blank" tip="Open kaart Putten">Infra en Verkeer op de kaart</a></h1>
+
+				<span style='font-size:1.7rem;line-height:160%;font-family:"Arial","sans-serif";color:black'>
+					Infrastructuur gaat over land- en waterwegen,
+					lucht- en zeehavens en van leidingen voor telefoon, water, gas, electriciteit
+					en riolering.
+					<ul>
+						<li><b>Elektriciteit.</b> De laagspanningskabels, laagspanningsverdeelkasten, middenspannings installatie en onderstations.</li>
+
+						<li><b>Verkeer.</b> De verkeersongevallen en het
+						routenetwerk 1575 en 1650. Het routenetwerk is een reconstructie van de
+						belangrijkste doorgaande routes in de aangegeven jaren.</li>
+					</ul>
+					<p>Voor de kaart zie <a href="./kaart.html?lg=Infra%20en%20verkeer" target="_blank" tip="Open kaart Putten">Infra en Verkeer</a>
+				</span>
+			</div>
+			
+			<div id="landbouw" class="detailinfo" style="display:block">
+				<h1><a href="./kaart.html?lg=Landbouw" target="_blank" tip="Open kaart Putten">Landbouw op de kaart</a></h1>
+
+				<span style='font-size:1.7rem;line-height:160%;font-family:"Arial","sans-serif";color:black'>
+				Een overzicht van de grond die voor landbouw in gebruik
+				is (Agrarisch Areaal), een overzicht van de gewassen die worden verbouwd en een
+				overzicht van de voor verzuring gevoelige gebieden van de ecologische
+				hoofstructuur (de Wet Ammoniak en veehouderijbedrijven).
+				<p>Voor de kaart zie <a href="./kaart.html?lg=Landbouw" target="_blank" tip="Open kaart Putten">Landbouw</a>.
+				</span>
+			</div>
+			
+			<div id="milieu" class="detailinfo" style="display:block">
+				<h1><a href="./kaart.html?lg=Milieu" target="_blank" tip="Open kaart Putten">Milieu op de kaart</a></h1>
+
+				<span style='font-size:1.7rem;line-height:160%;font-family:"Arial","sans-serif";color:black'>
+				De groep bevat kaarten met daarop de geluidsniveaus bij wegen en spoorwegen.
+				<p>
+				Voor de kaart zie <a href="./kaart.html?lg=Milieu" target="_blank" tip="Open kaart Putten">Milieu</a>
+				</span>
+			</div>
+			
+			<div id="natuur" class="detailinfo" style="display:block">
+				<h1><a href="./kaart.html?lg=Natuur" target="_blank" tip="Open kaart Putten">Natuur op de kaart</a></h1>
+
+				<span style='font-size:1.7rem;line-height:160%;font-family:"Arial","sans-serif";color:black'>
+					De kaartlagen in de groep Natuur geven informatie over:
+					<ul>
+						<li><b>Natuurnetwerk Nederland</b>, voorheen de Ecologische HoofdStructuur (EHS). Het NNN kan worden gezien als de
+						ruggengraat van de Nederlandse natuur. Meer gedetailleerde informatie voor de
+						beschermde gebieden in de afzonderlijke provincies is te vinden in de
+						beschrijving van de provinciale bestanden over dit onderwerp. 
+						</li>
+						
+						<li><b>Nationale Landschappen.</b> De
+						rijksoverheid heeft in de Nota Ruimte 20 Nationale Landschappen aangewezen.
+						Nationale Landschappen zijn gebieden met internationaal zeldzame of unieke en
+						nationaal kenmerkende landschapskwaliteiten en in samenhang daarmee bijzondere
+						natuurlijke en recreatieve kwaliteiten. Het doel is om de landschappelijke,
+						cultuurhistorische en natuurlijke kwaliteiten van de Landschappen te behouden,
+						duurzaam te beheren en waar mogelijk te versterken. In samenhang daarmee dient
+						ook de toeristische betekenis toe te nemen.
+						</li>
+						
+						<li><b>Natura2000.</b> Natura 2000 is het samenhangend netwerk
+						van beschermde natuurgebieden in de Europese Unie bestaande uit Vogelrichtlijn-
+						en Habitatrichtlijngebieden. Natura 2000-gebieden zijn een samenvoeging van
+						beide en de daarin gelegen beschermde natuurmonumenten. In totaal gaat het om
+						ruim 200 gebieden waarvan drie mariene gebieden in de Exclusieve Economische
+						Zone (EEZ) op de Noordzee.</li>
+
+						<li><b>Nationaal Beschermde Gebieden.</b> Een samenstel van natura2000 gebieden,
+						de nationale parken en het natuur netwerk nederland.</li>
+
+						<li>De gebieden die in beheer zijn bij <b>Staatsbosbheer</b></li>
+
+						<li><b>Monumentale bomen</b>, dat zijn bomen die zijn opgenomen
+						in het nationale bomenregister vanwege hun ouderdom – meer dan 80 jaar – en hun
+						beeldbepalendheid.</li>
+						
+						<li>Een overzicht van de <b>Inheemse bomen en struiken</b>, zoals beuk en eik.</li>
+						
+						<li>Gebieden
+						aangewezen als <b>Rijksmonumentaal groen</b>. Deze laag bevat parken, tuinen en
+						begraafplaatsen die beschermd zijn als rijksmonument. Er is sprake van een monument als dze in het <a
+						href="https://www.cultureelerfgoed.nl/onderwerpen/rijksmonumentenregister">Rijksmonumentenregister</a> 
+						van de Rijksdienst voor het Cultureel Erfgoed (RCE) wordt bijgehouden.
+						</li>
+						
+						<li><b>Groen Erfgoed.</b>
+						Die zijn landschapselementen waarin autochtone bomen en struiken voorkomen van
+						vóór 1850.
+						</li>
+					</ul>
+					<p>Voor de kaart zie <a href="./kaart.html?lg=Natuur" target="_blank" tip="Open kaart Putten">Natuur</a>
+				</span>
+			</div>			
+			<div id="recreatie" class="detailinfo" style="display:block">
+				<h1><a href="./kaart.html?lg=Recreatie" target="_blank" tip="Open kaart Putten">Recreatie op de kaart</a></h1>
+
+				<span style='font-size:1.7rem;line-height:160%;font-family:"Arial","sans-serif";color:black'>
+					Deze groep bestaat uit twee onderdelen:
+					<ul>
+						<li><b>Fietsen.</b> De landelijke fietsroutes en de fietsknooppuntenroutes.</li>
+
+						<li><b>Wandelen.</b> De wandelroutes van Staatsbosbeheer,
+						van de NS, streekpaden, lange afstandsroutes en klompenpaden.</li>
+					</ul>
+					<p>Voor de kaart zie <a href="./kaart.html?lg=Recreatie" target="_blank" tip="Open kaart Putten">Recreatie</a>
+				</span>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+	function myFunction() {
+	console.log("myFunction")
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "navigation-bar") {
+		x.className += " responsive";
+	  } else {
+		x.className = "navigation-bar";
+	  }
+	}
+	
+	// Er is een block per onderwerp gedefinieerd. Alle blocken onzichtbaar maken. Daarna alleen gekozen block zichtbaar maken.
+	function openTab(tabName) {
+	  var i, x;
+	  x = document.getElementsByClassName("detailinfo");
+	  for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+	  }
+	  document.getElementById(tabName).style.display = "block";
+	}
+	
+	function tips() {
+		openTab('putten')
+		Array.from(document.querySelectorAll('[tip]')).forEach(el => {
+		  let tip = document.createElement('div');
+		  tip.classList.remove('tooltip')
+		  tip.classList.add('tooltip');
+		  tip.innerText = el.getAttribute('tip');
+		  tip.style.transform =
+			'translate(' +
+			  (el.hasAttribute('tip-left') ? 'calc(-100% - 5px)' : '15px') + ', ' +
+			  (el.hasAttribute('tip-top') ? '-100%' : '0') +
+			')';
+		  el.appendChild(tip);
+		  el.onmousemove = e => {
+			tip.style.left = e.clientX + 'px'
+			tip.style.top = e.clientY + 'px';
+		  };
+		});
+	}
+	
+	<!-- window.addEventListener('resize', (event) => { -->
+		<!-- widthheight(); -->
+	<!-- }); -->
+	<!-- widthheight(); -->
+	
+	function widthheight() {
+		var w = window.outerWidth;
+		var h = window.outerHeight;
+		var ws = window.screen.width;
+		var hs = window.screen.height;
+		console.log("RESIZE " + w + ", " + h + " > " + ws + ", " + hs)
+		var whdiv = document.getElementById("widthheight");
+		whdiv.innerHTML= "width: " + w +  ", height: " + h + " > " + ws + ", " + hs
+		
+	}
+
+	</script>
+  </body>

@@ -1,0 +1,216 @@
+
+ <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />       
+	<link href="./css/geogemeente.css" type="text/css" rel="stylesheet">
+	<link rel="icon" href="./favicon.ico">
+</head>
+<body onload="openTab('geogemeente')">
+	<div class="navigation-bar" id="myTopnav">
+		<div id="navigation-container">
+		  <div id="div-icon">
+			<img src="./images/geogemeente2.gif" class="geogemeente-icon">
+		  </div>
+		  <div id="div-totalmenu">
+			<div id="div-menu">
+				<a class="active" href="#">Home</a>
+				<a href="./putten/index.html">Putten</a>
+				<a href="#">Contact</a>
+			</div>
+		    <div class="dropdown">
+			  <a href="javascript:void(0);" class="dropbtn" onclick="myFunction()"><img class="iconmenu" alt="Qries" src="./images/menu.png"></a>
+			  <div class="dropdown-content">
+				<a href="#">Home</a>
+				<a href="./putten/index.html">Putten</a>
+				<a href='mailto:info@geogemeente.nl'>Contact</a>
+			  </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+	<div class="contentrow">
+		<div id='gemeentenaam'>
+			GeoGemeente
+		</div>
+		<div class="gridverticalcenter">
+			<div class='gridcontainer'>
+				<div class="griditem" onclick="openTab('geogemeente');">
+					<img src="./images/geogemeente.png"class="menu_icon">
+					<span class="menu_text">Geogemeente.nl</span>
+				</div>
+				<div class="griditem" onclick="openTab('soortenlagen');">
+					<img src="./images/soortlagen.png" class="menu_icon">
+					<span class="menu_text">Soorten lagen</span>
+				</div>
+				<div class="griditem" onclick="openTab('weergave');">
+					<img src="./images/weergave.png" class="menu_icon">
+					<span class="menu_text">Weergave</span>
+				</div>
+				<div class="griditem" onclick="openTab('functionaliteiten');">
+					<img src="./images/functionaliteiten.png" class="menu_icon">
+					<span class="menu_text">Functionaliteiten</span>
+				</div>
+				<div class="griditem" onclick="window.open('./putten/index.html', '_blank')";">
+					<img src="./images/putten1.png" class="menu_icon">
+					<span class="menu_text">Putten</span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="detailcontainer">
+		<div class="detailinnercontainer">
+			<!-- The expanding grid (hidden by default) -->
+			<div id="geogemeente" class="detailinfo" style="display:block">
+				<h1>GeoGemeente.nl</h1>
+
+				<span style='font-size:1.7rem;line-height:160%;font-family:"Arial","sans-serif";color:black'>
+					<b>GeoGemeente is een website waarop voor een specifieke gemeente zoveel mogelijk relevante geografische gegevens bij elkaar worden gebracht.</b>
+					<p>Geografische gegevens  zijn gegevens die op een kaart kunnen worden weergegeven. Deze kaarten geven een geweldig inzicht in de omgeving waarin we leven, en hebben daarmee veel meerwaarde
+					voor het beter leren kennen van je omgeving. Ieder kijkt met z'n eigen 'bril' naar zijn omgeving, en velen hebben de kennis
+					die ze van hun omgeving hebben opgedaan ook beschikbaar gesteld op een kaart. <p>
+					Er is een grote hoeveel kaarten beschikbaar, maar het is voor de gemiddelde gebruiker een enorme zoektocht om allerlei interessante informatie te vinden.
+					<ul>
+						<li>Er zijn een aantal algemene sites beschikbaar (pdok, nationaal georegister, arcgis.com), maar daar staat zoveel op dat
+						het erg veel tijd vraagt om relevante informatie te vinden.</li> 
+						<li>Daarnaast zijn er heel veel sites die enkele kaart kaartlagen 
+						presenteren die vanuit hun achtergrond interessant zijn (Staatsbosbeheer, fietsnet, cbs, etc). </li>
+						<li>Veel van de interessante informatie van je omgeving is wellicht helemaal niet beschikbaar. Om die reden maakt GeoGemeente ook zelf
+						kaartlagen, en dan meestal van informatie die vooral en met name op lokaal niveau interessant is. Je vindt hier dus wellicht informatie die 
+						je nergens anders op een kaart kunt vinden. Deze informatie wordt dan beschikbaar gesteld in het menu onder de naam van de betreffende gemeente.
+					</ul>
+					<p><p>
+					Voordelen van GeoGemeente zijn onder andere:
+					<ul>
+						<li>Veel aanbieders stellen alleen zijn eigen kaarten beschikbaar. Als je de wilt zoeken naar kaartmateriaal moet je alle aanbieders zien te vinden, en dan bij elke aanbieder die kaart die voor jou interessant is. 
+						GeoGemeente haalt gegevens van zoveel mogelijk aanbieders bij elkaar</li>
+						<li>Bij een aantal aanbieders ontbreekt achtergrondinformatie over de betekenis van de gegevens. 
+						GeoGemeente probeert waar mogelijk ook relevante achtergrondinformatie beschikbaar te stellen.</li>
+						<li>De meeste aanbieders gaan uit van de <i>informatie</i> die ze beschikbaar hebben maar vaak is dat informatie die voor je omgeving niet relevant is. 
+						Geogemeente gaat niet uit van de informatie maar gaat juist uit van je <i>omgeving</i>. Daarbij zijn alleen die lagen geselecteerd die voor je omgeving interessant zijn. Je ziet dus alleen lagen met relevante info voor je omgeving.</li>
+						<li>Elke aanbieder maakt zijn eigen keuze in de functionaliteiten hij beschikbaar stelt, en op welke wijze hij dat doet. 
+						Daarmee moet je als gebruiker dus op elke site leren hoe je de informatie kunt tonen die jíj wilt zien. GeoGemeente heeft één manier van beschikbaarstellen van al
+						deze lagen.</li>
+						<li>Gegevens van verschillende aanbieders zijn niet te combineren. Binnen GeoGemeente is dat eenvoudig mogelijk.</li>
+					</ul>
+					
+					<p><p>
+					De grote winst van het bij elkaar brengen van al deze gegevens is dat je eenvoudig ontdekt welke enorme hoeveelheid informatie er beschikbaar is van je eigen omgeving. 
+					En daarmee leer je je eigen omgeving beter kennen, krijg je meer inzicht in de omgeving, wordt je meer bewust van je omgeving en kun je bewuster keuzes maken.
+					Dat kan worden gebruikt om:
+					</ul>
+					<li>jou als lokale bewoner inzicht te geven in je eigen omgeving.</li>
+					<li>een gemeentebreed platform te creëeren om eenvoudig geo-informatie met een breder publiek te delen</li>
+					<li>de toerist en bezoeker inzicht te geven in de interessante informatie over je omgeving door bijvoorbeeld natuurlijke waarden of monumenten met achtergrondinformatie onder aandacht brengen</li>
+					<li>Belangstelling in historie te stimuleren</li>
+					<li>Achtergrond informatie vanuit de kaart inzichtelijk te maken.</li>
+					</ul>
+					<p><p>
+					We hopen dat GeoGemeente je veel inzicht geeft in je
+					eigen gemeente en je interesse voor je gemeente vergroot. Op dit moment is er
+					voor de gemeente Putten een GeoGemeente-website aangemaakt. Je kunt deze
+					bereiken op <a href="./putten/index.html">http://www.geogemeente.nl/putten/.</a>
+					<p>
+
+					Voor vragen kun je contact opnemen met <a href="mailto:geogemeente@outlook.com">GeoGemeente@outlook.com</a>
+				</span>
+			</div>
+			
+			<div id="soortenlagen" class="detailinfo" style="display:none;">
+			  <h1>Soorten lagen</h1>
+				<span style='font-size:1.7rem;line-height:160%;font-family:"Arial","sans-serif";color:black'>
+					<ul>
+						<li><b>Publieke lagen. </b>
+						De meeste geografische lagen worden beheerd door <i>externe
+						aanbieders</i>. Daarmee is het resultaat dus afhankelijk van deze aanbieders.
+						Het kan voorkomen dat aanbieders hun kaartlagen niet meer beschikbaar stellen,
+						of de wijze van aanroepen aanpassen. Dan kan de kaartlaag niet meer worden
+						getoond. Verzoek is om in dit via het contact formulier aan te geven, zodat dit
+						kan worden aangepast.</li>
+						<li><b>Specifieke lagen per gemeente</b>.
+						Een aantal lagen is <i>specifiek voor een gemeente</i>.
+						Deze staat in de laagselectie altijd bovenaan onder de naam van de gemeente.
+						Deze lagen worden in een aantal gevallen door <b>GeoGemeente</b> zelf
+						beschikbaar gesteld en beheerd. Vragen hierover kunnen via het contactformulier
+						worden ingediend.</li>
+						<li><b>Informatie over de lagen. </b>
+						Op veel websites is er bij de getoonde geografische
+						gegevens geen beschrijving aanwezig van de betekenis van de gegevens. In <b>GeoGemeente</b>
+						is geprobeerd om bij elke kaartlaag in de legenda een aantal relevante linken
+						te vermelden waarop achtergrond informatie kan worden gevonden.</li>
+					</ul>
+				</span>
+			</div>
+
+			<div id="weergave" class="detailinfo" style="display:none;">
+			  <h1>Weergave</h1>
+				<span style='font-size:1.7rem;line-height:160%;font-family:"Arial","sans-serif";color:black'>
+					De weergave is vast gezet op de contouren van de
+					betreffende gemeente. De omgeving rondom de gemeente wordt beeldvullend
+					aangeboden. Als het om algemene kaartlagen gaat wordt de omgeving van de
+					betreffende gemeente beeldvullend aangeboden. Voor gemeente-specifieke lagen
+					wordt de weergave vaak beperkt tot de betreffende gemeente.
+				</span>
+			</div>
+
+			<div id="functionaliteiten" class="detailinfo" style="display:block">
+				<h1>Functionaliteiten</h1>
+
+				<span style='font-size:1.7rem;line-height:160%;font-family:"Arial","sans-serif";color:black'>
+					Er is geprobeerd de site zo eenvoudig mogelijk te houden. Daarom zijn
+					er een beperkt aantal functionaliteiten aangebracht:
+					<p>
+					<ul>
+						<li>GeoGemeente biedt een groot aantal lagen aan. Deze kun je kiezen met behulp van 
+						de LaagKiezer. Deze is te vinden rechts boven in het scherm. Door met de muis
+						boven het <img width=43 height=44 src="./images/layerswitcher_icon.jpg" v:shapes="Afbeelding_x0020_1">	
+						icoon te gaan staan kun je zien welke lagen beschikbaar zijn. De lagen zijn opgedeeld in groepen. Groepen worden <b>vetgedrukt</b> weergegeven.
+						<img width=213 height=260 src="./images/layerswitcher_geogemeente.jpg" align=right hspace=12 v:shapes="Afbeelding_x0020_5"></li>
+						<p>Door op de naam van een groep  te klikken opent zich de lijst met onderliggende lagen. Door met de muis boven de naam van één van de lagen te gaan staan wordt informatie
+						over de laag getoond. Door op een laagnaam te klikken worden de laag zichtbaar gemaakt op de kaart. Er kunnen meerdere lagen over elkaar worden getekend. 
+						Elke volgende laag die zichtbaar wordt gemaakt wordt over de vorige lagen getekend. Doordat de kaarten 'transparant' zijn kunnen je de onderliggende lagen toch nog zien.
+						Door een tweede keer op een laagnaam te klikken wordt deze weer onzichtbaar gemaakt. Door een tweede keer op een groepsnaam te klicken wordt deze weer ingeklapt.
+						<p>Als de muis buiten de uitgeklapte laagkiezer wordt gebracht wordt de laagkiezer ingeklapt. Om het weer uit te klappen breng je de muis weer boven het icoon van de laagkiezer.
+						<li>Om meer of minder details te zien kun je in/uit zoomen met scrollwiel van de muis, het aanraakscherm van de mobiel of met de zoombalk. De zoombalk vind je links boven in de kaart.</li>
+						<li>Als er is ingezoomd kun je niet de hele kaart zien. Om dan een andere stuk van de kaart te zien klik je met de linkermuis, houdt je de knop ingedrukt
+						en beweeg je de muis. De kaart wordt dan 'meegesleept'.</li>
+						<li>Voor het maken van een onderscheid tussen verschillende betekenissen van wat in een laag wordt getoond wordt gebruik gemaakt van kleuren, symbolen en tekst. Om de betekenis
+						te begrijpen heb je een legenda nodig. Deze legenda is standaard verborgen, maar kan zichtbaar worden gemaakt, of weer worden verborgen, met de legenda knop (L) rechts onderin de kaart.</li>
+						<li>Van elementen die in de kaart worden getoond (bijvoorbeeld gebouwen of percelen) is er vaak achtergrond informatie beschikbaar. </li>
+						<li>In de normale weergave is de adresbalk van je browser zichtbaar. Wil je meer ruimte voor de kaart dan kan deze onzichtbaar worden gemaakt. Gebruik daarvoor de knop met de pijl 
+						helemaal rechts boven in het scherm. Om de adresbalk weer zichtbaar te maken klik je nog een keer op deze knop.</li>
+						<li>Op je scherm wordt met een pijltje de positie van de muis weergegeven. Deze positie op je scherm komt overeen met een plekje op de kaart die wordt getoond. De plek op de 
+						kaart wordt aangegeven met een x (van west naar oost) en en y waarde (van zuid naar noord). De waardes worden weergegeven rechts boven in het informatieblok achter de tekst 'Pos: '.
+						Daaronder wordt het zoomniveau/de resolutie weergegeven. Dit zoomniveau is bij sommige lagen belangrijk, omdat de informatie van sommige lagen alleen maar bij bepaalde zoomniveau's
+						wordt weergegeven.	</li>
+						<li>Links onderin de kaart wordt weergegeven wat het gebruikte schaal schaalniveau is.</li>
+					</ul>
+				</span>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+	function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "navigation-bar") {
+		x.className += " responsive";
+	  } else {
+		x.className = "navigation-bar";
+	  }
+	}
+	
+	function openTab(tabName) {
+	  var i, x;
+	  x = document.getElementsByClassName("detailinfo");
+	  for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+	  }
+	  document.getElementById(tabName).style.display = "block";
+	}
+	<!-- var x=document.getElementById('navigation-container'); -->
+	<!-- x.addEventListener("click", function(evt){  -->
+			<!-- console.log("Event: ", evt.target.href) -->
+			<!-- window.open(evt.target.href, '_blank').focus(); -->
+			<!-- evt.preventDefault(); -->
+		<!-- }); -->
+	</script>
+  </body>
