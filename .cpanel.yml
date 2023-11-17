@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/example/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp chroma.min.js $DEPLOYPATH
+    - /bin/cp -R putten $DEPLOYPATH
+    - /bin/cp -R olv6.16 $DEPLOYPATH
+    - /bin/cp -R css $DEPLOYPATH
