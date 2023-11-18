@@ -5,9 +5,7 @@
 !/images/**
 !olv6.16/**
 !ol-layerswitcher-master/**
-!css/geogemeente.css
-!css/geonet.css
-!css/Search.css
+!css/*.css
 !/putten/favicon*
 !/putten/index.html
 !/putten/kaart.html
