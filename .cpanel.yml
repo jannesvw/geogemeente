@@ -1,10 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/example/public_html/
-    - /bin/cp -uf index.html $DEPLOYPATH
-    - /bin/cp -uf chroma.min.js $DEPLOYPATH
-    - /bin/cp -Ruf putten $DEPLOYPATH
-    - /bin/cp -Ruf olv6.16 $DEPLOYPATH
-    - /bin/cp -Ruf css $DEPLOYPATH
-    - /bin/cp -Ruf images $DEPLOYPATH
+    - export DEPLOYPATH=/home/ki12390798/public_html/
+    - /bin/cp -ruf * $DEPLOYPATH
