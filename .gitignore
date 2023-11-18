@@ -4,7 +4,7 @@
 !/modules/chroma.min.js
 !/images/**
 !/node_modules/jquery/**
-!/node_modules/jquery-ui/**
+!/node_modules/jquery-ui-dist/**
 !/node_modules/proj4/**
 !olv6.15/**
 !ol-layerswitcher-master/**
