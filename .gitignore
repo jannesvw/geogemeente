@@ -15,4 +15,4 @@
 !/putten/images/**
 !/putten/putteninformatie/**
 !/putten/dist/**
-!/putten/modules/**
+!/putten/modules/*.js
