@@ -248,7 +248,7 @@ var lg32= new ol.layer.Group({title: 'Recreatie', fold: 'close', openInLayerSwit
 var lg33= new ol.layer.Group({title: 'Historie', fold: 'close', openInLayerSwitcher: true, layers: [lg30]})
 var lg34= new ol.layer.Group({title: 'Infra en Verkeer', fold: 'close', openInLayerSwitcher: true, layers: [lg31,lg10]})
 var lg35= new ol.layer.Group({title: 'Natuur & Recreatie', fold: 'close', openInLayerSwitcher: true, layers: [lg32,lg11,lg12]})
-var lgs = [lg1,lg2,lg3,lg25,lg28,lg29,lg33,lg34,lg35]
+var lgs = [lg1,lg29,lg35,lg3,lg2,lg34,lg33,lg25,lg28]
 
 		return [lgs, ly_0000]
 	}
