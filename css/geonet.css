@@ -150,6 +150,7 @@
 
 	table td:last-child {
 		border-right: none;
+		width: 40%;
 	}
 
 	tbody td:nth-of-type(odd), thead td:nth-of-type(odd) {
