@@ -15,3 +15,5 @@
 !/putten/images/**
 !/putten/putteninformatie/**
 !/putten/dist/**
+!.htaccess
+!/ptnfo001.html
