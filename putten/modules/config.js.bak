@@ -1,4 +1,0 @@
-const usetopmenu=true
-const usemask=true
-
-export {usetopmenu, usemask};
