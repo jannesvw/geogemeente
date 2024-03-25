@@ -17,7 +17,7 @@ export default class GeoLayerDefinitions {
 		});
 
 	}
-  
+
 defineLayers() {
 var ly_0000= new ol.layer.Vector({opacity: 0.7, source: this.gld.srcOtherWFS('https://geo.geogemeente.nl:8443/geoserver/', 'GeoNetPutten', 'GeoNetPutten:maskerputten', '', '/wfs', map), visible: true, style: this.maskstyle});
 var ly_0001= new ol.layer.Tile({title: 'OSM', visible: true, opacity: 0.6, projection: 'EPSG:3857', baseLayer: true, source: this.gld.srcOSM('https://a.tile.openstreetmap.org/{z}/{x}/{y}.png')});
