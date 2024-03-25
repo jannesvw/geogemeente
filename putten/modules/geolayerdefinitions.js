@@ -8,7 +8,7 @@ export default class GeoLayerDefinitions {
 		this.gld = new GeoLayerDefinitionFunctions()
 		this.maskstyle = new ol.style.Style({
 		  fill: new ol.style.Fill({
-			color: 'rgba(255,255,255,0.6)',
+			color: 'rgba(255,255,255)',
 		  }),
 		  stroke: new ol.style.Stroke({
 			color: '#FF0000',
@@ -19,7 +19,7 @@ export default class GeoLayerDefinitions {
 	}
   
 defineLayers() {
-var ly_0000= new ol.layer.Vector({opacity: 0.6, source: this.gld.srcOtherWFS('https://geo.geogemeente.nl:8443/geoserver/', 'GeoNetPutten', 'GeoNetPutten:maskerputten', '', '/wfs', map), visible: true, style: this.maskstyle});
+var ly_0000= new ol.layer.Vector({opacity: 0.7, source: this.gld.srcOtherWFS('https://geo.geogemeente.nl:8443/geoserver/', 'GeoNetPutten', 'GeoNetPutten:maskerputten', '', '/wfs', map), visible: true, style: this.maskstyle});
 var ly_0001= new ol.layer.Tile({title: 'OSM', visible: true, opacity: 0.6, projection: 'EPSG:3857', baseLayer: true, source: this.gld.srcOSM('https://a.tile.openstreetmap.org/{z}/{x}/{y}.png')});
 var ly_0002= new ol.layer.Tile({title: 'Top10NL', visible: false, opacity: 0.6, minZoom: -Infinity, maxZoom: 19.5, baseLayer: true, source: this.gld.srcPDOKWMTS('https://service.pdok.nl/brt/top10nl/wmts/v1_0', 'top10nl')});
 var ly_0003= new ol.layer.Tile({title: 'BRT achtergrond standaard', visible: false, opacity: 0.6, minZoom: -Infinity, baseLayer: true, source: this.gld.srcPDOKWMTS('https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0', 'standaard')});
