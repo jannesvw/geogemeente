@@ -2,5 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ki12390798/public_html/
-    - /bin/cp -Ruf . $DEPLOYPATH
-    
+    - /bin/cp putten/dist/*.js $DEPLOYPATH
