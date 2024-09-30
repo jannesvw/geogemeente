@@ -16,7 +16,7 @@
 	
 	/* ################################ */
 	<!-- popup -->
-	/* #popup { */
+	#popup {
 		/* position: absolute; */
 		/* background-color: white; */
 		/* box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2); */
@@ -26,9 +26,10 @@
 		/* bottom: 12px; */
 		/* left: -50px; */
 		/* min-width: 40vw; */
-		/* max-width: 60vw; */
+		/* max-height: 80vw; */
+		height: 800px;
 		/* padding-top: 20px; */
-	/* } */
+	}
 
 	/* #popup:after, #popup:before { */
 		/* top: 100%; */
@@ -75,6 +76,7 @@
 
 	#popup-content {
 		overflow-x: scroll;
+		max-width: 75%;
 	}
 
 	#error-closer {
