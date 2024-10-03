@@ -76,7 +76,7 @@
 
 	#popup-content {
 		overflow-x: scroll;
-		max-width: 75%;
+		max-width: 75vw;
 	}
 
 	#error-closer {
