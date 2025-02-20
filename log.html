@@ -1,0 +1,163 @@
+ <head>
+        <link href="./css/geogemeente.css" type="text/css" rel="stylesheet">
+		<link rel="icon" href="favicon.ico">
+		<meta charset="utf-8">
+		<style>
+			[tip] .tooltip {
+			  position: fixed;
+			  font-size: 16px;
+			  line-height: 20px;
+			  padding: 5px;
+			  background: white;
+			  border: 1px solid #ccc;
+			  visibility: hidden;
+			  opacity: 0;
+			  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+			  transition: opacity 0.3s, visibility 0s;
+			}
+
+			[tip]:hover .tooltip {
+			  visibility: visible;
+			  opacity: 1;
+			}
+
+			button {
+			  display: block;
+			  cursor: pointer;
+			  padding: 8px 15px;
+			  border: 1px solid gray;
+			  border-radius: 4px;
+			  margin: 50px;
+			  font-size: 18px;
+			  background: white;
+			}
+		</style>
+</head>
+<body onload="tips()">
+	<div class="navigation-bar" id="myTopnav">
+		<div id="navigation-container">
+		  <div id="div-icon">
+			<img src="./images/geogemeente2.gif" class="geogemeente-icon">
+		  </div>
+		  <div id="div-totalmenu">
+			<div id="div-menu">
+				<a href="./index.html">Home</a>
+				<div class="dropdown-achtergrondinfo">
+					<a class="dropbtn_a">Log</a>
+					<div class="dropdown-content-achtergrondinfo1">
+						<a href="#v2.1">v2.1</a>
+						<a href="#v2.2">v2.2</a>
+					</div>
+				</div>
+				<a href="./putten/kaart.html?lg=Putten" target="_blank">Kaart</a>
+			    <a href='mailto:geogemeente@gmail.com'>Contact</a>
+			</div>
+		  </div>
+		</div>
+	</div>
+	<div class="detailcontainer">
+		<div class="detailinnercontainer" id="v2.1">
+			<!-- The expanding grid (hidden by default) -->
+			<h1>Versie 2.1 - 5 feb 2025</h1>
+			<span style='font-size:1.1rem;line-height:160%;font-family:"Arial","sans-serif";color:black'>
+			<ul>
+				<li>Popup.</li>
+					<ul>
+						<li>Als meerdere features worden geselecteerd wordt er een tab per feature getoond. Bij het selecteren van een andere tab wordt nu de bijbehorende feature geaccentueerd.</li>
+						<li>De popup weergave voor de laag Putten > Schovenhorst > aankopen is aangepast.</li>
+					</ul>
+				<li>Legenda.</li>
+					<ul>
+						<li>Als legenda werd geactiveerd werd een deel van de kaart niet getoond. </li>
+					</ul>
+			<li>Lagen.</li>
+				<ul>
+					<li>De laag Putten > Kadaster 1832 > Ontgonnen grond classering is nu opgedeeld in 4 afzonderlijke subgroepen: Belastingklasse voor resp weiland, tuin, tabaksland, hooiland en bouwland.</li>
+					<li>De laaggroep Putten > Kadaster 1832 is nu opgedeeld in 4 subgroepen: Eigendom en klasse, Kadastraal, Wegen en paden. De legenda van deze lagen is nu betekenisvol gemaakt.</li>
+					<li>De laag Putten > Kadaster 1832 </li>
+					<li>De laag Landbouw > Agrarisch Areaal werkte niet meer doordat de bron was aangepast.</li>
+					<li>De laag Registraties en Lufo > PC6 gebieden werd niet compleet getoond. Dat is nu aangepast.</li>
+					<li>De laag Putten > Putten Algemeen > Fotos toonde de foto's niet meer.</li>
+					<li>De laag Natuur & Recreatie > Natuur > Nationaal beschermde gebieden werkte niet meer doordat de bron was aangepast.</li>
+					<li>De laag Putten > Monumenten > Monumenten Percelen is verwijderd.
+					<li>De laag Putten > Monumenten > Monumenten is verplaatst naar Putten > Algemeen
+					<li>De gemeentegrens wordt nu niet meer in de lagenlijst getoond.</li>
+					<li>De laag Putten > Kadaster 1832 > Wildforstergoed Horne is verplaatst naar Putten > Klooster goed ed.</li>
+					<li>De volgorde van de lagen wordt nu alfabetisch weergegeven. Uitzondering zijn de laaggroep Putten (die stond en staat bovenaan) en de laaggroep Achtergrondkaarten (die stond en staat onderaan).</li>
+					<li>Bij het tonen van nieuwe lagen werd het gemeente masker niet aangepast.</li>
+					<li>Bij het laden van lagen wordt nu een spinner getoond zolang de laag wordt geladen. En als de laag niet kan worden geladen wordt een popup melding getoond.</li>
+				</ul>
+			<li>Nieuwe lagen.</li>
+				<ul>
+					<li>Putten > Schovenhorst > Aankopen. De verschillende aankopen die geleid hebben tot het huidige Schovenhorst.</li>
+					<li>Bodem > Water > Grondwater diepte meting-trappen</li>
+					<li>Bodem > Water > Grondwater diepte meting</li>
+				</ul>
+			</ul>
+		</div>	
+		<div class="detailinnercontainer" id="v2.2">
+			<!-- The expanding grid (hidden by default) -->
+			<h1>Versie2.2</h1>
+		</div>
+	</div>	
+
+	
+	<script>
+	function myFunction() {
+	console.log("myFunction")
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "navigation-bar") {
+		x.className += " responsive";
+	  } else {
+		x.className = "navigation-bar";
+	  }
+	}
+	
+	// Er is een block per onderwerp gedefinieerd. Alle blocken onzichtbaar maken. Daarna alleen gekozen block zichtbaar maken.
+	function openTab(tabName) {
+	  var i, x;
+	  x = document.getElementsByClassName("detailinfo");
+	  for (i = 0; i < x.length; i++) {
+		x[i].style.display = "none";
+	  }
+	  document.getElementById(tabName).style.display = "block";
+	}
+	
+	function tips() {
+		openTab('putten')
+		Array.from(document.querySelectorAll('[tip]')).forEach(el => {
+		  let tip = document.createElement('div');
+		  tip.classList.remove('tooltip')
+		  tip.classList.add('tooltip');
+		  tip.innerText = el.getAttribute('tip');
+		  tip.style.transform =
+			'translate(' +
+			  (el.hasAttribute('tip-left') ? 'calc(-100% - 5px)' : '15px') + ', ' +
+			  (el.hasAttribute('tip-top') ? '-100%' : '0') +
+			')';
+		  el.appendChild(tip);
+		  el.onmousemove = e => {
+			tip.style.left = e.clientX + 'px'
+			tip.style.top = e.clientY + 'px';
+		  };
+		});
+	}
+	
+	<!-- window.addEventListener('resize', (event) => { -->
+		<!-- widthheight(); -->
+	<!-- }); -->
+	<!-- widthheight(); -->
+	
+	function widthheight() {
+		var w = window.outerWidth;
+		var h = window.outerHeight;
+		var ws = window.screen.width;
+		var hs = window.screen.height;
+		console.log("RESIZE " + w + ", " + h + " > " + ws + ", " + hs)
+		var whdiv = document.getElementById("widthheight");
+		whdiv.innerHTML= "width: " + w +  ", height: " + h + " > " + ws + ", " + hs
+		
+	}
+
+	</script>
+  </body>
